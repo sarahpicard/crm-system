@@ -17,6 +17,7 @@ import('./config/passport.js')
 // require routes
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
+import { passUsertoView } from './middleware/middleware.js'
 
 // create the express app
 const app = express()
@@ -54,6 +55,9 @@ app.use(
 // passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+
+// custom middleware 
+app.use(passUsertoView)
 
 // router middleware
 app.use('/', indexRouter)
