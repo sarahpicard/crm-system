@@ -3,3 +3,6 @@
   display: flex;
   justify-content: right;
 }
+.btn-success {
+  background-color: #34573f;
+}
