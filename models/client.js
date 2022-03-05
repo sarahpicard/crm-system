@@ -2,6 +2,13 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema
 
+const conversationSchema = new Schema ({
+  date: Date, 
+  info: String, 
+}, {
+  timestamps: true
+})
+
 const clientSchema = new Schema ({
   name: String, 
   occupation: String, 
@@ -13,6 +20,8 @@ const clientSchema = new Schema ({
   status: Boolean, 
   source: String, 
   contacted: Boolean, 
+  conversations: [{conversationSchema}],
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
 })
 
 const Client = mongoose.model('Client', clientSchema)
