@@ -7,10 +7,6 @@
 
     <a href="/clients">Clients</a>
 
-
-
-
-  
 <!-------------------- 🔐 authorization 🔐 --------------------->
     <% if (user) { %>
       <a href="/auth/logout">
@@ -23,4 +19,10 @@
         </button>
       </a>
     <% } %>
-  </nav>
+
+<!---------------- 🚧 nav construction 🚧  ------------------->
+<%- include('../partials/index.ejs') %>
+
+
+</nav>
+
