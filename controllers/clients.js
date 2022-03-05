@@ -41,7 +41,6 @@ function create(req, res) {
   })
 }
 
-function edit
 
 export {
   index,
