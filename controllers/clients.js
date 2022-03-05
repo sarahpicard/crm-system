@@ -60,6 +60,15 @@ function update(req, res) {
   })
 }
 
+function createConversation(req, res) {
+  Client.findById(req.params.id, function(err, customer) {
+    customer.conversations.push(req.body)
+    customer.save(function(err) {
+      res.redirect(`/clients/${customer._id}`)
+    })
+  })
+}
+
 
 export {
   index,
@@ -68,4 +77,5 @@ export {
   create,
   edit,
   update,
+  createConversation,
 }

@@ -20,7 +20,7 @@ const clientSchema = new Schema ({
   status: Boolean, 
   source: String, 
   contacted: Boolean, 
-  conversations: [{conversationSchema}],
+  conversations: [conversationSchema],
   owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
 })
 

@@ -18,6 +18,9 @@ router.get('/:id/edit', clientsCtrl.edit)
 // POST localhost:3000/clients
 router.post('/', clientsCtrl.create)
 
+// POST localhost:3000/clients/:id/conversations
+router.post('/:id/conversations', clientsCtrl.createConversation)
+
 // PUT localhost:3000/clients/:id
 router.put('/:id', clientsCtrl.update)
 
