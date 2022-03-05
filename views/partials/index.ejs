@@ -1,75 +1,87 @@
-
+<!-- the following open-source code is attributed to Bedimcode for navigation bar responsive design. Github repo is linked in README.md file for more information. The source code has been adjusted to fit the confines of this project  -->
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ===== BOX ICONS ===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://kit.fontawesome.com/500b2fd509.js" crossorigin="anonymous"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ===== CSS ===== -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-        
-        <title>Sidebar menu responsive</title>
-      </head>
-      <body id="body-pd">
-        <header class="header" id="header">
-          <div class="header__toggle">
-            <i class='bx bx-menu' id="header-toggle"></i>
-          </div>
-          
+  <!--  icons  -->
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/500b2fd509.js" crossorigin="anonymous"></script>
+
+  <!--  css  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@100;400&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body id="body-pd">
+  <header class="header" id="header">
+    <div class="header__toggle">
+      <i class='bx bx-menu' id="header-toggle"></i>
+    </div>
+
+    <!-------------------- 🔐 authorization 🔐 --------------------->
+    <% if (user) { %>
+      <a href="/auth/logout">
+        <button class="google-button" type="submit">Logout</button>
+      </a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="google-button siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+        <% } %>
+
           <!-- <div class="header__img"> -->
-            <!-- //img below is avatar -->
-            <!-- <img src="/perfil.jpeg" alt="">
+          <!-- //img below is avatar -->
+          <!-- <img src="/perfil.jpeg" alt="">
             </div> -->
-          </header>
-          
-          <div class="l-navbar" id="nav-bar">
-            <nav class="nav">
-              <div>
-                <a href="#" class="nav__logo">
-                  <i class='bx bx-layer nav__logo-icon'></i>
-                  <span class="nav__logo-name"></span>
-                </a>
-                
-                <div class="nav__list">
-                  <a href="/" class="nav__link active">
-                    <i class="fa-solid fa-house-chimney"></i>
-                    <span class="nav__name">Home</span>
-                  </a>
-                  
-                  <a href="/clients" class="nav__link">
-                    <i class="fa-solid fa-user-group"></i>
-                    <span class="nav__name">Clients</span>
-                  </a>
-                  
-                  <a href="/" class="nav__link">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <span class="nav__name">To-Do's</span>
-                  </a>
-                  
-                  <a href="/" class="nav__link">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <span class="nav__name">Schedule</span>
-                  </a>
-                  
-                </div>
-              </div>
-              
-              <a href="#" class="nav__link">
+  </header>
+
+  <div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav__logo">
+          <i class='bx bx-layer nav__logo-icon'></i>
+          <span class="nav__logo-name"></span>
+        </a>
+
+        <div class="nav__list">
+          <a href="/" class="nav__link active">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span class="nav__name">Home</span>
+          </a>
+
+          <a href="/clients" class="nav__link">
+            <i class="fa-solid fa-user-group"></i>
+            <span class="nav__name">Clients</span>
+          </a>
+
+          <a href="/" class="nav__link">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <span class="nav__name">To-Do's</span>
+          </a>
+
+          <a href="/" class="nav__link">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span class="nav__name">Schedule</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- <a href="#" class="nav__link">
                 <i class='bx bx-log-out nav__icon' ></i>
                 <span class="nav__name">Log Out</span>
-              </a>
-            </nav>
-          </div>
-          
-          <!--===== MAIN JS =====-->
-          
+              </a> -->
+    </nav>
+  </div>
+</body>
 
-      </body>
 </html>

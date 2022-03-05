@@ -1,4 +1,6 @@
-/*===== SHOW NAVBAR  =====*/ 
+// the following open-source code is attributed to Bedimcode for navigation bar responsive design. Github repo is linked in README.md file for more information. 
+
+/* show navbar */ 
 const showNavbar = (toggleId, navId, bodyId, headerId) =>{
   const toggle = document.getElementById(toggleId),
   nav = document.getElementById(navId),
@@ -22,7 +24,7 @@ const showNavbar = (toggleId, navId, bodyId, headerId) =>{
 
 showNavbar('header-toggle','nav-bar','body-pd','header')
 
-/*===== LINK ACTIVE  =====*/ 
+/* link active */ 
 const linkColor = document.querySelectorAll('.nav__link')
 
 function colorLink(){

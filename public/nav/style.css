@@ -1,23 +1,24 @@
+/*  the following open-source code is attributed to Bedimcode for navigation bar responsive design. Github repo is linked in README.md file for more information. The source code has been adjusted to fit the confines of this project.  */
 
-/*===== VARIABLES CSS =====*/
+/*  css variables */
 :root{
   --header-height: 5rem;
-  --nav-width: 75px;
+  --nav-width: 70px;
 
-  /*===== Colors =====*/
+  /* colors */
   --first-color: #34573f;
   --first-color-light: #C8D5B9;
   --white-color: white;
   
-  /*===== Font and typography =====*/
+  /* Font and typography */
   --body-font: 'Roboto', sans-serif;
-  --normal-font-size: 25px;
+  --normal-font-size: 20px;
   
-  /*===== z index =====*/
+  /* z index */
   --z-fixed: 100;
 }
 
-/*===== BASE =====*/
+/* base */
 *,::before,::after{
   box-sizing: border-box;
 }
@@ -35,7 +36,7 @@ a{
   text-decoration: none;
 }
 
-/*===== HEADER =====*/
+/* header */
 .header{
   width: 100%;
   height: var(--header-height);
@@ -70,7 +71,7 @@ a{
   width: 40px;
 }
 
-/*===== NAV =====*/
+/* navigation */
 .l-navbar{
   position: fixed;
   top: 0;
@@ -126,7 +127,7 @@ a{
 }
 
 .nav__icon{
-  font-size: 1.25rem;
+  font-size: 1.20rem;
 }
 
 /*Show navbar movil*/
@@ -153,7 +154,7 @@ a{
   background-color: var(--white-color);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* media queries */
 @media screen and (min-width: 768px){
   body{
     margin: calc(var(--header-height) + 1rem) 0 0 0;
