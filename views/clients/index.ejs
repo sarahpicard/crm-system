@@ -4,13 +4,24 @@
 <section>
   <h1><%= title %></h1>
   <a href="/clients/new">Add a New Client</a>
-  <ul>
-    <% clients.forEach(client => { %>
-      <li><%= client.name %></li>
-      <li><%= client.phone %></li>
-      <li><%= client.email %></li>
-    <% }) %>
-  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% clients.forEach(client => { %>
+        <tr>
+          <td><a href="/clients/edit/<%= client._id %>"><%= client.name %></a></td>
+          <td><%= client.phone %></td>
+          <td><%= client.email %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
 </section>
 
 
