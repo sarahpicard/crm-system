@@ -25,7 +25,17 @@
       <i class='bx bx-menu' id="header-toggle"></i>
     </div>
 
+<!----------------------- 🧒  avatar 🧒 ------------------------>
+    <% if (user?.profile.avatar) { %>
+      <div>
+        <img class="avatar"
+        src="<%= user.profile.avatar %>"
+        alt="<%= user.profile.name %> avatar"/>
+      </div>
+    <% } %>
+  
 <!-------------------- 🔐 authorization 🔐 --------------------->
+
     <% if (user) { %>
       <a href="/auth/logout">
         <button class="btn btn-success google-button" type="submit">Logout</button>
