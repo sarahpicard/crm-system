@@ -13,6 +13,13 @@ function index(req, res) {
   })
 }
 
+function newClient(req, res) {
+  res.render('clients/new', {
+    title: 'Add a New Client',
+  })
+}
+
 export {
   index,
+  newClient as new, 
 }
