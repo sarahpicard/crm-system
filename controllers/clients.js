@@ -20,9 +20,9 @@ function newClient(req, res) {
 }
 
 function show(req, res) {
-  Client.findById(req.params.id).populate('owner').then(client => {
+  Client.findById(req.params.id).populate('owner').then(customer => {
     res.render('clients/show', {
-      client,
+      customer,
       title: 'Client'
     })
   })
