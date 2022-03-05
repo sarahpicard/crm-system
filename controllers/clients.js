@@ -41,10 +41,31 @@ function create(req, res) {
   })
 }
 
+function edit(req, res) {
+  Client.findById(req.params.id, function(err, customer) {
+    res.render('clients/edit', {
+      customer, 
+      err, 
+      title: 'Edit Client'
+    })
+  })
+}
+
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] ==='') delete req.body[key]
+  }
+  Client.findByIdAndUpdate(req.params.id, req.body, function(err, customer) {
+    res.redirect(`/clients/${customer._id}`)
+  })
+}
+
 
 export {
   index,
   newClient as new, 
   show,
   create,
+  edit,
+  update,
 }

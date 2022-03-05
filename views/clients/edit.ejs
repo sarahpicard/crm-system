@@ -3,7 +3,12 @@
 
 <section>
   <h1>Edit Client</h1>
-  
+  <form action="/clients/<%= customer._id %>?_method=PUT" method="POST">
+    <label>Name:
+      <input type="text" name="name" value="<%= customer.name %>">
+    </label><br>
+    <button type="submit">Save Client</button>
+  </form>
 </section>
 
 <%- include('../partials/footer') %>

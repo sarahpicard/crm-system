@@ -12,8 +12,14 @@ router.get('/new', clientsCtrl.new)
 // GET localhost:3000/clients/:id
 router.get('/:id', clientsCtrl.show)
 
+// GET localhost:3000/clients/:id/edit
+router.get('/:id/edit', clientsCtrl.edit)
+
 // POST localhost:3000/clients
 router.post('/', clientsCtrl.create)
+
+// PUT localhost:3000/clients/:id
+router.put('/:id', clientsCtrl.update)
 
 export {
   router,
