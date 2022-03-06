@@ -3,40 +3,49 @@
 
 <section>
   <h1><%= title %></h1>
-  <form action="/clients" method="post">
-    <label>Name: 
-      <input type="text" name="name" required>
-    </label><br>
-    <label>Phone Number:
-      <input type="text" name="phone" required>
-    </label><br>
-    <label>Email:
-      <input type="text" name="email" required>
-    </label><br>
-    <label>Occupation: 
-      <input type="text" name="occupation">
-    </label><br>
-    <label>Address:
-      <input type="text" name="address" required>
-    </label><br>
-    <label>LinkedIn URL:
-      <input type="text" name="linkedinurl">
-    </label><br>
-    <label>Status:
-      <select name="status">
-        <option value="green">Green</option>
-        <option value="red">Red</option>
-      </select>
-    </label><br>
-    <label>Source:
-      <input type="text" name="source">
-    </label><br>
-    <label>Contacted:
-      <input type="checkbox" name="status">
-    </label><br>
-    <label>Notes:
-      <input type="text" name="notes">
-    </label>
+
+  <form class="form-group" action="/clients" method="post">
+
+    <div class="form-floating mb-3">
+      <input type="text" name="name" required class="form-control" id="floatingInput" placeholder="name">
+      <label for="floatingInput">name</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="tel" name="phone" required class="form-control" id="floatingInput" placeholder="phone">
+      <label for="floatingInput">phone</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="email" name="email" required class="form-control" id="floatingInput" placeholder="email">
+      <label for="floatingInput">email</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" name="occupation" required class="form-control" id="floatingInput" placeholder="occupation">
+      <label for="floatingInput">occupation</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" name="address" required class="form-control" id="floatingInput" placeholder="address">
+      <label for="floatingInput">address</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="url" name="linkedinurl" required class="form-control" id="floatingInput" placeholder="LinkedIn URL">
+      <label for="floatingInput">LinkedIn URL</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input type="text" name="source" required class="form-control" id="floatingInput" placeholder="source">
+      <label for="floatingInput">source</label>
+    </div>
+
+    <div class="form-floating">
+      <textarea name="notes" id="floatingTextarea2" style="height: 100px;" placeholder="leave notes here" class="form-control"></textarea>
+      <label for="floatingTextarea2">notes</label>
+    </div>
+
     <button class="btn btn-success" type="submit">Submit</button>
   </form>
 </section>
