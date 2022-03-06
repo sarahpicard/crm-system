@@ -16,6 +16,7 @@
         <th scope="col">Email</th>
         <th scope="col">Occupation</th>
         <th scope="col">Status</th>
+        <th scope="col">Delete Client</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,11 @@
           <td><%= client.email %></td>
           <td><%= client.occupation %></td>
           <td><%= client.status %></td>
+          <td>
+            <form action="/clients/<%= client._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-success">X</button>
+            </form>
+          </td>
         </tr>
       <% }) %>
     </tbody>

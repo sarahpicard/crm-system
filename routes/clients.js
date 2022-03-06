@@ -21,6 +21,9 @@ router.post('/', clientsCtrl.create)
 // POST localhost:3000/clients/:id/conversations
 router.post('/:id/conversations', clientsCtrl.createConversation)
 
+// DELETE localhost:3000/clients/:id
+router.delete('/:id', clientsCtrl.delete)
+
 // PUT localhost:3000/clients/:id
 router.put('/:id', clientsCtrl.update)
 

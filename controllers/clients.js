@@ -69,6 +69,12 @@ function createConversation(req, res) {
   })
 }
 
+function deleteClient(req, res) {
+  Client.findByIdAndDelete(req.params.id, function(err, client) {
+    res.redirect('/clients')
+  })
+}
+
 
 export {
   index,
@@ -78,4 +84,5 @@ export {
   edit,
   update,
   createConversation,
+  deleteClient as delete,
 }

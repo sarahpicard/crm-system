@@ -1,46 +1,52 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+  <%- include('../partials/nav') %>
 
-<main>
-  <h1 class="client-name client-head"><%= customer.name %></h1>
-  <section>
-    <a href="/clients/<%= customer._id %>/edit">
-      <button class="btn btn-success">Edit Client</button>
-    </a>
-  </section>
+    <main>
+      <section>
+        <h1 class="client-name">
+          <%= customer.name %>
+        </h1>
+        <a href="/clients/<%= customer._id %>/edit">
+          <button class="btn btn-success">Edit Client</button>
+        </a>
+      </section>
 
-<!------------- ☎️ conversations ☎️ ------------------->
-              <!-- add a new conversation  -->
-  <h3>Conversations:</h3>
-  <form action="/clients/<%= customer._id %>/conversations" method="POST">
-    <label for="date">Date: </label>
-    <input type="datetime-local" name="date" required>
-    <label for="info">Notes:</label>
-    <input type="text" name="info" required>
-    <button class="btn btn-success" type="submit">Submit</button>
-  </form>
+      <!------------- ☎️ conversations ☎️ ------------------->
+      <!-- add a new conversation  -->
+      <h3>Conversations:</h3>
+      <form action="/clients/<%= customer._id %>/conversations" method="POST">
+        <label for="date">Date: </label>
+        <input type="datetime-local" name="date" required>
+        <label for="info">Notes:</label>
+        <input type="text" name="info" required>
+        <button class="btn btn-success" type="submit">Submit</button>
+      </form>
 
-              <!-- see conversations  -->
-  <% if (customer.conversations.length) { %>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% customer.conversations.forEach(function(conversation) { %>
-          <tr>
-            <td><%= conversation.date %></td>
-            <td><%= conversation.info %></td>
-          </tr>
-        <% }) %>
-      </tbody>
-    </table>
-  <% } else { %>
-    <h3>No Conversations Yet</h3>
-  <% } %>
-  </main> 
+      <!-- see conversations  -->
+      <% if (customer.conversations.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% customer.conversations.forEach(function(conversation) { %>
+              <tr>
+                <td>
+                  <%= conversation.date %>
+                </td>
+                <td>
+                  <%= conversation.info %>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+        <% } else { %>
+          <h3>No Conversations Yet</h3>
+          <% } %>
+    </main>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
