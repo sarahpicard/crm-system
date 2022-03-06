@@ -2,14 +2,34 @@
   <%- include('../partials/nav') %>
 
     <main>
-      <section>
-        <h1 class="client-name">
-          <%= customer.name %>
-        </h1>
+      <div class="profile-header">
+        <div class="avatar-div">
+          <img src="https://i.imgur.com/XO3pzJV.png" alt="avatar" class="client-avatar">
+        </div>
+        <div class="name-div">
+          <h1><%= customer.name %></h1>
+          <h6><%= customer.occupation %></h6>
+          <div class="info-div">
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <%= customer.phone %>
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <%= customer.email %>
+            </p>
+            <p>
+              <i class="fa-solid fa-map-location"></i>
+              <%= customer.address %>
+            </p>
+          </div>
+        </div>
         <a href="/clients/<%= customer._id %>/edit">
-          <button class="btn btn-success">Edit Client</button>
+          <button class="btn btn-success edit-button">
+            <i class="fa-solid fa-pen"></i>
+          </button>
         </a>
-      </section>
+      </div>
 
       <!------------- ☎️ conversations ☎️ ------------------->
       <!-- add a new conversation  -->
