@@ -45,3 +45,20 @@ body {
   font-size: 18px;
   margin-right: 70px;
 }
+
+/* clients index page  */
+.clients-title {
+  font-size: 60px;
+  /* margin-right: 1265px; */
+}
+.clients-head {
+  display: inline-block;
+}
+.new-client-btn {
+  margin-top: -18px;
+}
+
+/*----------- 💃 client :id page 💃 -----------*/
+.client-name {
+  font-size: 60px;
+}

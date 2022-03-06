@@ -2,12 +2,11 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  <h1 class="client-name client-head"><%= customer.name %></h1>
   <section>
     <a href="/clients/<%= customer._id %>/edit">
       <button class="btn btn-success">Edit Client</button>
     </a>
-    <div>Name: <%= customer.name %></div>
   </section>
 
 <!------------- ☎️ conversations ☎️ ------------------->
