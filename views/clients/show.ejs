@@ -23,16 +23,16 @@
               <%= customer.address %>
             </p>
           </div>
+          <a href="/clients/<%= customer._id %>/edit">
+            <button class="btn btn-success edit-button">
+              <i class="fa-solid fa-pen fa-sm"></i>
+            </button>
+          </a>
         </div>
-        <a href="/clients/<%= customer._id %>/edit">
-          <button class="btn btn-success edit-button">
-            <i class="fa-solid fa-pen"></i>
-          </button>
-        </a>
       </div>
-
-      <!------------- ☎️ conversations ☎️ ------------------->
+<!------------- ☎️ conversations ☎️ ------------------->
       <!-- add a new conversation  -->
+    <div>
       <h3>Conversations:</h3>
       <form action="/clients/<%= customer._id %>/conversations" method="POST">
         <label for="date">Date: </label>
@@ -41,6 +41,8 @@
         <input type="text" name="info" required>
         <button class="btn btn-success" type="submit">Submit</button>
       </form>
+
+    </div>
 
       <!-- see conversations  -->
       <% if (customer.conversations.length) { %>
