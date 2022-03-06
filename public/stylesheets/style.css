@@ -72,3 +72,11 @@ body {
 .conversation-btn {
   margin-top: 8px;
 }
+
+/* edit client view  */
+#floatingTextarea2 {
+  margin-top: 16px;
+}
+.form-floating {
+  margin-right: 900px;
+}
