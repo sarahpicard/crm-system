@@ -65,35 +65,10 @@ body {
   border-radius: 50%;
   margin-top: -5px;
 }
-/* .profile-header {
-  background-color: #f4f4f4;
-  margin-right: 70px;
-}
-.avatar-div {
-  background-color: #f4f4f4;
-  width: 13.33%;
-  float: left;
-  margin: 0 auto;
-  height: 200px;
-}
-.name-div {
-  background-color: #f4f4f4;
-  width: 83.33%;
-  margin: 0 auto;
-  height: 200px;
-  padding-top: 40px;
-  float: none;
-}
-.info-div {
-  background-color: #dbdbdb;
-  width: 43.33%;
-  position: absolute;
-  float: right;
-  top: 12px; bottom: 170px; right: 0; left: 600px;
-  width: 650px;
-  margin: auto;
-} */
 .edit-button {
   height: 42px;
   width: 42px;
+}
+.conversation-btn {
+  margin-top: 8px;
 }
