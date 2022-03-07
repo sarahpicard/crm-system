@@ -90,5 +90,12 @@ body {
   width: 20px;
   font-size: 10px;
   padding: 0;
-  
+}
+.todos-ul {
+  columns: 3;
+  margin-top: 40px;
+  vertical-align: top;
+}
+.todos-li {
+  margin: 30px;
 }
