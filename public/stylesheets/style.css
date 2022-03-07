@@ -80,3 +80,8 @@ body {
 .form-floating {
   margin-right: 900px;
 }
+
+/*----- todos view  ----------*/
+.checkbox:checked + .strikethrough {
+  text-decoration: line-through ;
+}

@@ -20,9 +20,12 @@
 
 <!-------------- 👀 see todos 👀 --------------->
 <div>
-  <ul>
+  <ul style="list-style: none;">
     <% todos.forEach(todo => { %>
-      <li><%= todo.content %></li>
+      <li>
+        <input type="checkbox" class="checkbox">
+        <label class="strikethrough"><%= todo.content %></label>
+      </li>
     <% }) %>
   </ul>
 </div>
