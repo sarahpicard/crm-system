@@ -46,19 +46,24 @@ body {
   margin-right: 70px;
 }
 
-/* clients index page  */
+/* ------------- 📇 clients index page 📇 ----------- */
 .clients-title {
   font-size: 60px;
-  /* margin-right: 1265px; */
 }
 .clients-head {
   display: inline-block;
+  margin-bottom: 50px;
 }
 .new-client-btn {
   margin-top: -18px;
+  margin-left: 55px;
+}
+.clients-section {
+  margin-right: 150px;
 }
 
-/*----------- 💃 client :id page 💃 -----------*/
+
+/*---------------- 💃 client :id page 💃 ----------------*/
 .client-avatar {
   height: 220px;
   width: 220px;
