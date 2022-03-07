@@ -1,6 +1,7 @@
 <%- include('../partials/html-head') %>
   <%- include('../partials/nav') %>
 
+  <% if (isSelf) %>
     <main>
       <div class="profile-header">
         <div class="avatar-div">
@@ -82,5 +83,7 @@
           <h3>No Conversations Yet</h3>
           <% } %>
     </main>
-
+  <% else { %>
+    <h1>Not user </h1>
+  <% } %>
     <%- include('../partials/footer') %>

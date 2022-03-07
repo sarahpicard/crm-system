@@ -20,28 +20,17 @@ function newClient(req, res) {
   })
 }
 
-// function show(req, res) {
-//   Client.findById(req.params.id).then(customer => {
-//     Client.findById(req.user.profile._id).then(self => {
-//       const isSelf = self._id.equals(profile._id)
-//       res.render('clients/show', {
-//         customer,
-//         title: 'Client', 
-//         isSelf, 
-//       })
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/clients')
-//   })
-// }
-
 function show(req, res) {
-  Client.findById(req.params.id).populate('owner').then(customer => {
-    res.render('clients/show', {
-      customer,
-      title: 'Client'
+  console.log(req.user)
+  Client.findById(req.params.id).then(customer => {
+    console.log(self)
+    Client.findById(req.user.profile._id).then(self => {
+      const isSelf = self._id.equals(profile._id)
+      res.render('clients/show', {
+        customer,
+        title: 'Client', 
+        isSelf, 
+      })
     })
   })
   .catch(err => {
@@ -49,6 +38,19 @@ function show(req, res) {
     res.redirect('/clients')
   })
 }
+
+// function show(req, res) {
+//   Client.findById(req.params.id).populate('owner').then(customer => {
+//     res.render('clients/show', {
+//       customer,
+//       title: 'Client'
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/clients')
+//   })
+// }
 
 function create(req, res) {
   req.body.status = !!req.body.status
