@@ -1,7 +1,8 @@
 <%- include('../partials/html-head') %>
   <%- include('../partials/nav') %>
 
-  <% if (isSelf) %>
+
+  <% if (user.profile._id.equals(customer.owner?._id)) { %>
     <main>
       <div class="profile-header">
         <div class="avatar-div">
@@ -83,7 +84,5 @@
           <h3>No Conversations Yet</h3>
           <% } %>
     </main>
-  <% else { %>
-    <h1>Not user </h1>
-  <% } %>
+    <% } %>
     <%- include('../partials/footer') %>

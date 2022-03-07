@@ -5,7 +5,7 @@ function index(req, res) {
   Client.find({}).then(clients => {
     res.render('clients/index', {
       clients, 
-      title: 'Clients'
+      title: 'Clients',
     })
   })
   .catch(err => {
@@ -22,8 +22,12 @@ function newClient(req, res) {
 
 function show(req, res) {
   Client.findById(req.params.id).populate('owner').then(customer => {
+    console.log(req.user.profile),
+    console.log(customer.owner, "owner")
+    console.log(req.params.body, 'req.body')
     res.render('clients/show', {
       customer,
+      isSelf: req.user.profile,
       title: 'Client'
     })
   })
@@ -35,7 +39,10 @@ function show(req, res) {
 
 function create(req, res) {
   req.body.status = !!req.body.status
+  req.body.owner = req.user.profile._id
   const client = new Client(req.body)
+  console.log(req.body, "body")
+  console.log(req.body.owner, "owner!")
   client.save(function(err) {
     if (err) return res.redirect('/clients/new')
     res.redirect('/clients')
@@ -76,6 +83,17 @@ function deleteClient(req, res) {
   })
 }
 
+function showRecentConversations(req, res) {
+  Client.find({}).then(conversation => {
+    console.log(conversation),
+    res.render('index', {
+      title: 'Daily View',
+      customer: conversation,
+      // isSelf: req.user.profile, 
+    })
+  })
+}
+
 
 export {
   index,
@@ -86,4 +104,5 @@ export {
   update,
   createConversation,
   deleteClient as delete,
+  showRecentConversations
 }

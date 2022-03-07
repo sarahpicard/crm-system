@@ -2,15 +2,27 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <% if (user) { %>
+  <% if (user.profile._id.equals(customer.owner?._id)) { %>
     <h1 class="daily-h1">Daily View</h1>
     <div class="daily-top-row">
       <div class="card conversation-child" style="width: 18rem;">
         <div class="card-header">Recent Conversations</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-        </ul>
+        <table>
+          <thead>
+            <tr class="list-group list-group-flush">
+              <th>Date</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% customer.conversations.forEach(function(conversation) { %>
+              <tr>
+                <td class="list-group-item"></td>
+                <td class="list-group-item"></td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
       </div>
       <div class="card todo-child" style="width: 18rem;">
         <div class="card-header">Recent To-Dos</div>
