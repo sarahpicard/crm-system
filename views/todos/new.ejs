@@ -5,6 +5,26 @@
   <h1><%= title %></h1>
 </main>
 
+<!--------------- 📝 add a todo 📝 --------------->
+<div>
+  <h3>Add a To-Do</h3>
+  <form action="/todos" method="POST">
+    <div class="form-floating mb-3">
+      <input name="content" required type="text" class="form-control" id="floatingInput" placeholder="To-Do">
+      <label for="floatingInput">to-do</label>
+    </div>
 
+    <button class="btn btn-success" type="submit">Add</button>
+  </form>
+</div>
+
+<!-------------- 👀 see todos 👀 --------------->
+<div>
+  <ul>
+    <% todos.forEach(todo => { %>
+      <li><%= todo.content %></li>
+    <% }) %>
+  </ul>
+</div>
 
 <%- include('../partials/footer') %>
