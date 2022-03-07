@@ -2,12 +2,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
+  <h1 class="todo-h1"><%= title %></h1>
 </main>
 
 <!--------------- 📝 add a todo 📝 --------------->
-<div>
-  <h3>Add a To-Do</h3>
+<div class="enter-a-todo">
+  <h3 class="todo-h3">Add a To-Do</h3>
   <form action="/todos" method="POST">
     <div class="form-floating mb-3">
       <input name="content" required type="text" class="form-control" id="floatingInput" placeholder="To-Do">
@@ -20,6 +20,7 @@
 
 <!-------------- 👀 see todos 👀 --------------->
 <div class="todos">
+  <h3>All To-dos </h3>
   <ul style="list-style: none;" class="todos-ul">
     <% todos.forEach(todo => { %>
       <li class="todos-li">

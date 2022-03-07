@@ -93,9 +93,22 @@ body {
 }
 .todos-ul {
   columns: 3;
-  margin-top: 40px;
   vertical-align: top;
 }
 .todos-li {
   margin: 30px;
+}
+.todo-h3 {
+  font-size: small;
+  margin-bottom: 0;
+}
+.todo-h1 {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+.enter-a-todo {
+  margin-left: 8px;
+}
+.todos {
+  margin-top: 60px;
 }
