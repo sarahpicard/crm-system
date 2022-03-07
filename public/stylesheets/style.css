@@ -117,3 +117,15 @@ body {
 .todos {
   margin-top: 60px;
 }
+
+/*--------------- 📰 daily view 📰 ------------------*/
+.daily-h1 {
+  font-size: 60px;
+}
+.conversation-child {
+  float: left;
+  width: 50%;
+}
+.todo-child {
+  float: inline-end;
+}

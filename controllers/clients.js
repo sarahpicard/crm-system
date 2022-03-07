@@ -1,5 +1,6 @@
 import { Client } from "../models/client.js";
 
+
 function index(req, res) {
   Client.find({}).then(clients => {
     res.render('clients/index', {
@@ -18,6 +19,23 @@ function newClient(req, res) {
     title: 'Add a New Client',
   })
 }
+
+// function show(req, res) {
+//   Client.findById(req.params.id).then(customer => {
+//     Client.findById(req.user.profile._id).then(self => {
+//       const isSelf = self._id.equals(profile._id)
+//       res.render('clients/show', {
+//         customer,
+//         title: 'Client', 
+//         isSelf, 
+//       })
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/clients')
+//   })
+// }
 
 function show(req, res) {
   Client.findById(req.params.id).populate('owner').then(customer => {
