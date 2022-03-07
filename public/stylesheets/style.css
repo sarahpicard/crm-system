@@ -85,3 +85,10 @@ body {
 .checkbox:checked + .strikethrough {
   text-decoration: line-through ;
 }
+.btn-sm {
+  height: 20px;
+  width: 20px;
+  font-size: 10px;
+  padding: 0;
+  
+}

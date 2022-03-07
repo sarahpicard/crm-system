@@ -15,7 +15,14 @@ function create(req, res) {
   })
 }
 
+function deleteTodo(req, res) {
+  Todo.findByIdAndDelete(req.params.id, function(err, todo) {
+    res.redirect('/todos/new')
+  })
+}
+
 export {
   newTodo as new,
-  create
+  create,
+  deleteTodo as delete,
 }

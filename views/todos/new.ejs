@@ -25,6 +25,9 @@
       <li>
         <input type="checkbox" class="checkbox">
         <label class="strikethrough"><%= todo.content %></label>
+        <form action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
+          <button type="submit" class="btn btn-success btn-sm">X</button>
+        </form>
       </li>
     <% }) %>
   </ul>
