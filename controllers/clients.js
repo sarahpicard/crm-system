@@ -21,19 +21,6 @@ function index(req, res) {
   })
 }
 
-// function index(req, res) {
-//   Client.find({}).then(customer => {
-//     res.render('clients/index', {
-//       customer, 
-//       isSelf: req.user.profile,
-//       title: 'Clients',
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/clients')
-//   })
-// }
 
 function newClient(req, res) {
   res.render('clients/new', {
@@ -61,20 +48,6 @@ function show(req, res) {
       res.redirect('/clients')
   })
 }
-
-// function show(req, res) {
-//   Client.findById(req.params.id).populate('owner').then(customer => {
-//     res.render('clients/show', {
-//       customer,
-//       isSelf: req.user.profile,
-//       title: 'Client'
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/clients')
-//   })
-// }
 
 function create(req, res) {
   req.body.status = !!req.body.status
