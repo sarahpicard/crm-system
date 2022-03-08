@@ -2,10 +2,17 @@ import { Client } from "../models/client.js";
 
 
 function index(req, res) {
-  Client.find({}).then(clients => {
-    res.render('clients/index', {
-      clients, 
-      title: 'Clients',
+  Client.find({ owner: req.user.profile._id}).then(customer => {
+    Client.findById(req.user.profile._id)
+    .then(self => {
+      console.log(req.user.profile._id, 'owner!')
+      // console.log(customer.owner._id, "customer")
+      // const isSelf = req.user.profile._id
+      res.render('clients/index', {
+        customer,
+        self,
+        title: 'Clients',
+      })
     })
   })
   .catch(err => {
@@ -13,6 +20,20 @@ function index(req, res) {
     res.redirect('/clients')
   })
 }
+
+// function index(req, res) {
+//   Client.find({}).then(customer => {
+//     res.render('clients/index', {
+//       customer, 
+//       isSelf: req.user.profile,
+//       title: 'Clients',
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/clients')
+//   })
+// }
 
 function newClient(req, res) {
   res.render('clients/new', {
@@ -21,21 +42,39 @@ function newClient(req, res) {
 }
 
 function show(req, res) {
-  Client.findById(req.params.id).populate('owner').then(customer => {
-    console.log(req.user.profile),
-    console.log(customer.owner, "owner")
-    console.log(req.params.body, 'req.body')
-    res.render('clients/show', {
-      customer,
-      isSelf: req.user.profile,
-      title: 'Client'
+  Client.findById(req.params.id)
+    .populate('owner')
+    .then(customer => {
+      Client.findById(req.user.profile._id)
+        .then(self => {
+          const isSelf = req.user.profile
+          res.render('clients/show', {
+            customer, 
+            self,
+            isSelf, 
+            title: 'Client'
+          })
+        })
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/clients')
+    .catch(err => {
+      console.log(err)
+      res.redirect('/clients')
   })
 }
+
+// function show(req, res) {
+//   Client.findById(req.params.id).populate('owner').then(customer => {
+//     res.render('clients/show', {
+//       customer,
+//       isSelf: req.user.profile,
+//       title: 'Client'
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/clients')
+//   })
+// }
 
 function create(req, res) {
   req.body.status = !!req.body.status
@@ -85,7 +124,6 @@ function deleteClient(req, res) {
 
 function showRecentConversations(req, res) {
   Client.find({}).then(conversation => {
-    console.log(conversation),
     res.render('index', {
       title: 'Daily View',
       customer: conversation,

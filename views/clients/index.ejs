@@ -1,42 +1,53 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<section class="clients-section">
+
+<% if (!user.profile._id.equals(customer.owner?._id)) { %>
+  <section class="clients-section">
+    <div>
+      <h1 class="clients-head clients-title"><%= title %></h1>
+      <a href="/clients/new">
+        <button class="new-client-btn btn btn-success">Add a New Client</button>
+      </a>
+    </div>
+    <table class="client-table table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Occupation</th>
+          <th scope="col">Status</th>
+          <th scope="col">Delete Client</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% customer.forEach(client => { %>
+          <tr>
+            <td scope="row"><a href="/clients/<%= client._id %>"><%= client.name %></a></td>
+            <td><%= client.phone %></td>
+            <td><%= client.email %></td>
+            <td><%= client.occupation %></td>
+            <td><%= client.status %></td>
+            <td>
+              <form action="/clients/<%= client._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-success">X</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </section>
+<% } else { %>
+  <h3>No Clients Yet!</h3>
   <div>
     <h1 class="clients-head clients-title"><%= title %></h1>
     <a href="/clients/new">
       <button class="new-client-btn btn btn-success">Add a New Client</button>
     </a>
   </div>
-  <table class="client-table table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Email</th>
-        <th scope="col">Occupation</th>
-        <th scope="col">Status</th>
-        <th scope="col">Delete Client</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% clients.forEach(client => { %>
-        <tr>
-          <td scope="row"><a href="/clients/<%= client._id %>"><%= client.name %></a></td>
-          <td><%= client.phone %></td>
-          <td><%= client.email %></td>
-          <td><%= client.occupation %></td>
-          <td><%= client.status %></td>
-          <td>
-            <form action="/clients/<%= client._id %>?_method=DELETE" method="POST">
-              <button type="submit" class="btn btn-success">X</button>
-            </form>
-          </td>
-        </tr>
-      <% }) %>
-    </tbody>
-  </table>
-</section>
+<% } %>
 
 
 

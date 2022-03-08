@@ -17,7 +17,7 @@ import('./config/passport.js')
 // require routes
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
-import { passUsertoView } from './middleware/middleware.js'
+import { isLoggedIn, passUsertoView } from './middleware/middleware.js'
 import { router as clientsRouter } from './routes/clients.js'
 import { router as todosRouter } from './routes/todos.js'
 
