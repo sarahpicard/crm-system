@@ -17,8 +17,8 @@
           <th scope="col">Phone</th>
           <th scope="col">Email</th>
           <th scope="col">Occupation</th>
-          <th scope="col">Status</th>
-          <th scope="col">Delete Client</th>
+          <th scope="col">Contacted</th>
+          <th class="delete-client-btn" scope="col">Delete Client</th>
         </tr>
       </thead>
       <tbody>
@@ -28,8 +28,8 @@
             <td><%= client.phone %></td>
             <td><%= client.email %></td>
             <td><%= client.occupation %></td>
-            <td><%= client.status %></td>
-            <td>
+            <td><%= client.contacted %></td>
+            <td class="delete-client-btn">
               <form action="/clients/<%= client._id %>?_method=DELETE" method="POST">
               <button type="submit" class="btn btn-success">X</button>
               </form>
