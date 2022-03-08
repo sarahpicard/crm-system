@@ -4,14 +4,16 @@
 
 <% if (user.profile._id.equals(customer.owner?._id)) { %>
     <main>
-      <div class="profile-header">
-        <div class="avatar-div">
-          <img src="https://i.imgur.com/XO3pzJV.png" alt="avatar" class="client-avatar">
-        </div>
-        <div class="name-div">
-          <h1><%= customer.name %></h1>
-          <h6><%= customer.occupation %></h6>
-          <div class="info-div">
+      <div class="card-deck-wrapper">
+        <div class="card-deck row">
+          <div class="card col-sm-5 w-auto border-0">
+            <img src="https://i.imgur.com/XO3pzJV.png" alt="avatar" class="client-avatar card-body">
+          </div>
+          <div class="card col-sm-5 w-25 border-0">
+            <h1 class="card-body customer-name"><%= customer.name %></h1>
+            <h6 class="card-body customer-occupation"><%= customer.occupation %></h6>
+          </div>
+          <div class="info-div card col-sm-5 w-50 border-0">
             <p>
               <i class="fa-solid fa-phone"></i>
               <%= customer.phone %>
@@ -25,18 +27,20 @@
               <%= customer.address %>
             </p>
           </div>
-          <a href="/clients/<%= customer._id %>/edit">
-            <button class="btn btn-success edit-button">
-              <i class="fa-solid fa-pen fa-sm"></i>
-            </button>
-          </a>
+          <div class="card col-sm-5 w-auto border-0">
+            <a href="/clients/<%= customer._id %>/edit">
+              <button class="btn btn-success edit-button">
+                <i class="fa-solid fa-pen fa-sm"></i>
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
-      <div>
-        <p><%= customer.notes %></p>
-        <p><%= customer.linkedinurl %></p>
-        <p><%= customer.source %></p>
-        <p><%= customer.contacted %></p>
+        <div>
+          <p><%= customer.notes %></p>
+          <p><%= customer.linkedinurl %></p>
+          <p><%= customer.source %></p>
+          <p><%= customer.contacted %></p>
+        </div>
       </div>
 <!------------- ☎️ conversations ☎️ ------------------->
       <!-- add a new conversation  -->
@@ -60,7 +64,7 @@
 
       <!-- see conversations  -->
       <% if (customer.conversations.length) { %>
-        <table class="table table-hover">
+        <table class="table table-hover conversation-table">
           <thead>
             <tr>
               <th scope="col">Date</th>
