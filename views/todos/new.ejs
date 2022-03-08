@@ -19,6 +19,7 @@
 </div>
 
 <!-------------- 👀 see todos 👀 --------------->
+<% if (!user.profile._id.equals(todos.owner?._id)) { %>
 <div class="todos">
   <h3>All To-dos </h3>
   <ul style="list-style: none;" class="todos-ul">
@@ -33,5 +34,8 @@
     <% }) %>
   </ul>
 </div>
+<% } else { %>
+  <h3>No To-Dos Yet!</h3>
+<% } %>
 
 <%- include('../partials/footer') %>

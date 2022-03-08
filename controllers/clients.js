@@ -5,9 +5,6 @@ function index(req, res) {
   Client.find({ owner: req.user.profile._id}).then(customer => {
     Client.findById(req.user.profile._id)
     .then(self => {
-      console.log(req.user.profile._id, 'owner!')
-      // console.log(customer.owner._id, "customer")
-      // const isSelf = req.user.profile._id
       res.render('clients/index', {
         customer,
         self,
