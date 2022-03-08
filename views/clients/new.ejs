@@ -12,7 +12,8 @@
     </div>
 
     <div class="form-floating mb-3">
-      <input type="tel" name="phone" required class="form-control" id="floatingInput" placeholder="phone">
+      <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" required class="form-control" id="floatingInput" placeholder="phone">
+      <small><%= "format: 123-456-7890" %></small>
       <label for="floatingInput">phone</label>
     </div>
 
@@ -32,7 +33,7 @@
     </div>
 
     <div class="form-floating mb-3">
-      <input type="url" name="linkedinurl" required class="form-control" id="floatingInput" placeholder="LinkedIn URL">
+      <input type="url" name="linkedinurl" class="form-control" id="floatingInput" placeholder="LinkedIn URL">
       <label for="floatingInput">LinkedIn URL</label>
     </div>
 

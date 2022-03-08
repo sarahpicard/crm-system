@@ -12,7 +12,7 @@ const conversationSchema = new Schema ({
 const clientSchema = new Schema ({
   name: String, 
   occupation: String, 
-  phone: Number, 
+  phone: String, 
   email: String, 
   address: String, 
   notes: String, 
