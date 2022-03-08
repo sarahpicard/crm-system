@@ -10,7 +10,8 @@
     </div>
     
     <div class="form-floating mb-3">
-      <input type="tel" class="form-control" id="floatingInput" placeholder="telephone number" name="phone" value="<%= customer.phone %>">
+      <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="floatingInput" placeholder="telephone number" name="phone" value="<%= customer.phone %>">
+      <small><%= "format: 123-456-7890" %></small>
       <label for="floatingInput">telephone</label>
     </div>
 
