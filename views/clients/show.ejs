@@ -4,30 +4,32 @@
 
 <% if (user.profile._id.equals(customer.owner?._id)) { %>
     <main>
-      <div class="card-deck-wrapper">
-        <div class="card-deck row">
-          <div class="card col-sm-5 w-auto border-0">
+      <div>
+        <div class="row">
+          <div class="w-auto">
             <img src="https://i.imgur.com/XO3pzJV.png" alt="avatar" class="client-avatar card-body">
           </div>
-          <div class="card col-sm-5 w-25 border-0">
+          <div class=" w-25 customer-head">
             <h1 class="card-body customer-name"><%= customer.name %></h1>
             <h6 class="card-body customer-occupation"><%= customer.occupation %></h6>
           </div>
-          <div class="info-div card col-sm-5 w-50 border-0">
-            <p>
-              <i class="fa-solid fa-phone"></i>
-              <%= customer.phone %>
-            </p>
-            <p>
-              <i class="fa-solid fa-envelope-open-text"></i>
-              <%= customer.email %>
-            </p>
-            <p>
-              <i class="fa-solid fa-map-location"></i>
-              <%= customer.address %>
-            </p>
+          <div class="info-div w-25 ">
+            <div class="info">
+              <p>
+                <i class="fa-solid fa-phone"></i>
+                <%= customer.phone %>
+              </p>
+              <p>
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <%= customer.email %>
+              </p>
+              <p>
+                <i class="fa-solid fa-map-location"></i>
+                <%= customer.address %>
+              </p>
+            </div>
           </div>
-          <div class="card col-sm-5 w-auto border-0">
+          <div class=" w-auto">
             <a href="/clients/<%= customer._id %>/edit">
               <button class="btn btn-success edit-button">
                 <i class="fa-solid fa-pen fa-sm"></i>

@@ -80,6 +80,30 @@ body {
 .conversation-btn {
   margin-top: 8px;
 }
+.conversation-table {
+  width: 93.3%;
+}
+.customer-name {
+  font-size: 3rem;
+  margin-top: 3px;
+  line-height: 50px;
+}
+.customer-occupation {
+  font-size: large;
+  margin-top: 0;
+  line-height: 0px;
+}
+.info-div {
+  background-color: #c8d5b9;
+}
+.customer-head {
+  margin-left: -3%;
+}
+.info {
+  padding: 6%;
+  font-size: large;
+}
+
 
 /* edit client view  */
 #floatingTextarea2 {
@@ -88,17 +112,6 @@ body {
 .form-floating {
   margin-right: 6.7%;
 }
-.conversation-table {
-  width: 93.3%;
-}
-.customer-name {
-  font-size: xxx-large;
-}
-.customer-occupation {
-  font-size: large;
-  margin-top: -80px;
-}
-
 /*----- todos view  ----------*/
 .checkbox:checked + .strikethrough {
   text-decoration: line-through ;
