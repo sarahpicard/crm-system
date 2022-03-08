@@ -1,52 +1,64 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+  <%- include('../partials/nav') %>
 
-<section>
-  <h1>Edit Client</h1>
-  <form action="/clients/<%= customer._id %>?_method=PUT" method="POST">
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name" value="<%= customer.name %>">
-      <label for="floatingInput">name</label>
-    </div>
-    
-    <div class="form-floating mb-3">
-      <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="floatingInput" placeholder="telephone number" name="phone" value="<%= customer.phone %>">
-      <small><%= "format: 123-456-7890" %></small>
-      <label for="floatingInput">telephone</label>
-    </div>
+    <section>
+      <h1>Edit Client</h1>
+      <form action="/clients/<%= customer._id %>?_method=PUT" method="POST">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name"
+            value="<%= customer.name %>">
+          <label for="floatingInput">name</label>
+        </div>
 
-    <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="email" name="email" value="<%= customer.email %>">
-      <label for="floatingInput">email</label>
-    </div>
+        <div class="form-floating mb-3">
+          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="floatingInput"
+            placeholder="telephone number" name="phone" value="<%= customer.phone %>">
+          <small>
+            <%= "format: 123-456-7890" %>
+          </small>
+          <label for="floatingInput">phone</label>
+        </div>
 
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="occupation" name="occupation" value="<%= customer.occupation %>">
-      <label for="floatingInput">occupation</label>
-    </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="email" name="email"
+            value="<%= customer.email %>">
+          <label for="floatingInput">email</label>
+        </div>
 
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="address" name="address" value="<%= customer.address %>">
-      <label for="floatingInput">address</label>
-    </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="occupation" name="occupation"
+            value="<%= customer.occupation %>">
+          <label for="floatingInput">occupation</label>
+        </div>
 
-    <div class="form-floating mb-3">
-      <input type="url" class="form-control" id="floatingInput" placeholder="LinkedIn URL" name="linkedinurl" value="<%= customer.linkedinurl %>">
-      <label for="floatingInput">LinkedIn URL</label>
-    </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="address" name="address"
+            value="<%= customer.address %>">
+          <label for="floatingInput">address</label>
+        </div>
 
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="source" name="source" value="<%= customer.source %>">
-      <label for="floatingInput">source</label>
-    </div>
+        <div class="form-floating mb-3">
+          <input type="url" class="form-control" id="floatingInput" placeholder="LinkedIn URL" name="linkedinurl"
+            value="<%= customer.linkedinurl %>">
+          <label for="floatingInput">LinkedIn URL</label>
+        </div>
 
-    <div class="form-floating">
-      <textarea class="form-control" placeholder="leave notes here" name="notes" id="floatingTextarea2" style="height: 100px;"></textarea>
-      <label for="floatingTextarea2">notes</label>
-    </div>
+        <div class="form-floating mb-3">
+          <select name="contacted" id="floatingInput" class="form-control">
+            <option value="true" <% customer.contacted ? 'selected' : '' %>>Yes</option>
+            <option value="false">No</option>
+          </select>
+          <label for="floatingInput">contacted</label>
+        </div>
 
-    <button class="btn btn-success" type="submit">Save Client</button>
-  </form>
-</section>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="leave notes here" name="notes" id="floatingTextarea2"
+            style="height: 100px;"></textarea>
+          <label for="floatingTextarea2">notes</label>
+        </div>
 
-<%- include('../partials/footer') %>
+        <button class="btn btn-success" type="submit">Save Client</button>
+      </form>
+    </section>
+
+    <%- include('../partials/footer') %>
