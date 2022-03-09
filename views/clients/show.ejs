@@ -41,14 +41,14 @@
         </div>
         <div class="further-info">
           <p>Notes: <%= customer.notes %></p>
-          <p><%= customer.source %></p>
-          <p><%= customer.contacted %></p>
+          <p>Source: <%= customer.source %></p>
+          <p>Contacted: <%= customer.contacted %></p>
         </div>
       </div>
 <!------------- ☎️ conversations ☎️ ------------------->
       <!-- add a new conversation  -->
-    <div>
-      <h3>Conversations:</h3>
+    <div class="new-conversations">
+      <h4 style="color: #34573f;">Add a New Conversation</h4>
       <form action="/clients/<%= customer._id %>/conversations" method="POST">
         <div class="form-floating mb-3">
           <input name="date" required type="datetime-local" class="form-control" id="floatingInput" placeholder="Date...">
@@ -67,6 +67,7 @@
 
       <!-- see conversations  -->
       <% if (customer.conversations.length) { %>
+        <h4 class="all-conversations" style="color: #34573f;">All Conversations</h4>
         <table class="table table-hover conversation-table">
           <thead>
             <tr>
@@ -88,7 +89,7 @@
           </tbody>
         </table>
         <% } else { %>
-          <h3>No Conversations Yet</h3>
+          <h3 style="color: #34573f;">No Conversations Yet</h3>
           <% } %>
     </main>
   <% } %>

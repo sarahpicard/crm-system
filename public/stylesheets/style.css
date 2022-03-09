@@ -85,6 +85,7 @@ body {
   width: 93.3%;
 }
 .customer-name {
+  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   display: inline;
   margin-top: 0;
@@ -115,6 +116,7 @@ body {
 .further-info {
   margin-top: 2%;
   margin-right: 30%;
+  color: #949494
 }
 .linkedin-button {
   background-color: #0e76a8;
@@ -131,6 +133,13 @@ body {
 .linkedin-button:active, .linkedin-button:hover {
   background-color: #084461;
   color: white;
+}
+.new-conversations {
+  margin-bottom: 4.5%;
+  margin-top: 2%;
+}
+.all-conversations {
+  margin-bottom: 1%;
 }
 
 
