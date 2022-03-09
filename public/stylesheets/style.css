@@ -85,7 +85,6 @@ body {
   width: 93.3%;
 }
 .customer-name {
-  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   display: inline;
   margin-top: 0;
@@ -142,18 +141,25 @@ body {
   margin-bottom: 1%;
 }
 
-
-
-
-
-/* edit client view  */
+/*--------------------------  ✏️ edit client view ✏️ ------------*/
 #floatingTextarea2 {
   margin-top: 16px;
 }
 .form-floating {
   margin-right: 6.7%;
 }
-/*----- todos view  ----------*/
+.edit-h1 {
+  font-size: 3rem;
+}
+.tel-format {
+  font-size: 0.75rem;
+}
+.edit-btn {
+  margin-top: 1%;
+}
+
+
+/*-------------------------- 📒 todos view 📒 ------------------*/
 .checkbox:checked + .strikethrough {
   text-decoration: line-through ;
 }

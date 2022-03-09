@@ -2,7 +2,7 @@
   <%- include('../partials/nav') %>
 
     <section>
-      <h1>Edit Client</h1>
+      <h1 class="edit-h1">Edit Client</h1>
       <form action="/clients/<%= customer._id %>?_method=PUT" method="POST">
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name"
@@ -13,7 +13,7 @@
         <div class="form-floating mb-3">
           <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="floatingInput"
             placeholder="telephone number" name="phone" value="<%= customer.phone %>">
-          <small>
+          <small class="tel-format">
             <%= "format: 123-456-7890" %>
           </small>
           <label for="floatingInput">phone</label>
@@ -57,7 +57,7 @@
           <label for="floatingTextarea2">notes</label>
         </div>
 
-        <button class="btn btn-success" type="submit">Save Client</button>
+        <button class="btn btn-success edit-btn" type="submit">Save Client</button>
       </form>
     </section>
 
