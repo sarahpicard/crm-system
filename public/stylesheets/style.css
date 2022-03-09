@@ -47,11 +47,11 @@ body {
 
 /* ------------- 📇 clients index page 📇 ----------- */
 .clients-title {
-  font-size: 60px;
+  font-size: 4rem;
 }
 .clients-head {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 2%;
 }
 .new-client-btn {
   margin-top: -18px;
@@ -154,6 +154,7 @@ body {
 }
 .tel-format {
   font-size: 0.75rem;
+  color: #949494;
 }
 .edit-btn {
   margin-top: 1%;
@@ -191,7 +192,7 @@ body {
   margin-bottom: 0;
 }
 .todo-h1 {
-  font-size: 60px;
+  font-size: 3rem;
   margin-bottom: 40px;
 }
 .enter-a-todo {
