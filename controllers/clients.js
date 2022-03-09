@@ -31,7 +31,6 @@ function show(req, res) {
   .then(customer => {
     Client.findById(req.user.profile._id)
     .then(self => {
-          console.log(customer.linkedinurl)
           const isSelf = req.user.profile
           res.render('clients/show', {
             customer, 

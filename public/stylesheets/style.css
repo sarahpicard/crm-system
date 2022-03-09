@@ -1,6 +1,7 @@
 body {
-  margin-left: 70px;
+  margin-left: 4.5%;
   margin-top: 130px;
+  margin-right: 5%;
 }
 .header {
   padding-top: 30px;
@@ -26,8 +27,6 @@ body {
   border-radius: 50%;
   margin-top: 0px;
 }
-
-/* ------------ 🎩 top nav line 🎩 -----------*/
 
 
 /* ------------📸  image card group 📸 --------*/
@@ -71,7 +70,9 @@ body {
   height: 220px;
   width: 220px;
   border-radius: 50%;
-  margin-top: -40px;
+  margin-top: -3%;
+  margin-bottom: -4%;
+  padding: 0;
 }
 .edit-button {
   height: 42px;
@@ -85,18 +86,18 @@ body {
 }
 .customer-name {
   font-size: 3rem;
-  margin-top: 3px;
-  line-height: 50px;
+  display: inline;
+  margin-top: 0;
+  margin-left: 2%;
 }
 .customer-occupation {
   font-size: large;
   margin-top: 0;
   line-height: 0px;
+  margin-left: 3%;
 }
 .info-div {
   background-color: #c8d5b9;
-  /* border-top-right-radius: 10%;
-  border-bottom-right-radius: 10%; */
 }
 .info {
   padding: 6%;
@@ -105,16 +106,15 @@ body {
 .profile-img {
   background-image: url(../images/background.png);
   background-size: cover;
-  /* border-top-left-radius: 10%;
-  border-bottom-left-radius: 10%; */
 }
 #row {
-  width: 90%;
-  padding-left: 20px;
+  width: 100%;
+  padding-left: 0.5%;
   margin-top: 0;
 }
 .further-info {
-  margin-top: 20px;
+  margin-top: 2%;
+  margin-right: 30%;
 }
 .linkedin-button {
   background-color: #0e76a8;
@@ -132,6 +132,7 @@ body {
   background-color: #084461;
   color: white;
 }
+
 
 
 

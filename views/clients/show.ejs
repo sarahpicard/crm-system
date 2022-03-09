@@ -25,6 +25,10 @@
                 <i class="fa-solid fa-map-location"></i>
                 <%= customer.address %>
               </p>
+              <a href="<%= customer.linkedinurl %>" class="btn linkedin-button btn-lg">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+              </a>
             </div>
           </div>
           <div class=" w-auto">
@@ -37,10 +41,6 @@
         </div>
         <div class="further-info">
           <p>Notes: <%= customer.notes %></p>
-          <a href="<%= customer.linkedinurl %>" class="btn linkedin-button btn-lg">
-            <i class="fa-brands fa-linkedin"></i>
-            LinkedIn
-          </a>
           <p><%= customer.source %></p>
           <p><%= customer.contacted %></p>
         </div>
