@@ -21,14 +21,14 @@
 <!-------------- 👀 see todos 👀 --------------->
 <% if (!user.profile._id.equals(todos.owner?._id)) { %>
 <div class="todos">
-  <h3>All To-dos </h3>
-  <ul style="list-style: none;" class="todos-ul">
+  <h3 class="all-todos">All To-dos </h3>
+  <ul style="list-style: none;" class="todos-ul list-group">
     <% todos.forEach(todo => { %>
-      <li class="todos-li">
+      <li class="todos-li list-group-item">
         <input type="checkbox" class="checkbox">
         <label class="strikethrough"><%= todo.content %></label>
         <form style="display: inline;" action="/todos/<%= todo._id %>?_method=DELETE" method="POST">
-          <button type="submit" class="btn btn-success btn-sm">X</button>
+          <button type="submit" class="btn btn-success btn-sm delete-todo-btn">X</button>
         </form>
       </li>
     <% }) %>

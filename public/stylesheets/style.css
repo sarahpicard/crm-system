@@ -184,22 +184,27 @@ body {
   columns: 3;
   vertical-align: top;
 }
-.todos-li {
-  margin: 30px;
-}
 .todo-h3 {
   font-size: small;
   margin-bottom: 0;
+  color: #949494;
 }
 .todo-h1 {
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 2%;
 }
 .enter-a-todo {
   margin-left: 8px;
 }
 .todos {
   margin-top: 60px;
+}
+.all-todos {
+  color: #34573f;
+}
+.delete-todo-btn {
+  float: right;
+  vertical-align: middle;
 }
 
 /*--------------- 📰 daily view 📰 ------------------*/
