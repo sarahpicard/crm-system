@@ -7,7 +7,7 @@ const scheduleSchema = new Schema ({
   date: Date,
   color: String,
   notes: String,
-  owner: {type: Schema.Types.ObjectId, ref: 'Profile'}
+  owner: {type: Schema.Types.ObjectId, ref: 'Profile'},
 })
 
 const Schedule = mongoose.model('Schedule', scheduleSchema)
