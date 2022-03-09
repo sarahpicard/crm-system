@@ -16,6 +16,7 @@ router.get('/:id', isLoggedIn, clientsCtrl.show)
 // GET localhost:3000/clients/:id/edit
 router.get('/:id/edit', isLoggedIn, clientsCtrl.edit)
 
+
 // POST localhost:3000/clients
 router.post('/', isLoggedIn, clientsCtrl.create)
 

@@ -20,7 +20,6 @@ import { router as authRouter } from './routes/auth.js'
 import { isLoggedIn, passUsertoView } from './middleware/middleware.js'
 import { router as clientsRouter } from './routes/clients.js'
 import { router as todosRouter } from './routes/todos.js'
-import { router as schedulesRouter } from './routes/schedules.js'
 
 // create the express app
 const app = express()
@@ -67,7 +66,6 @@ app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/clients', clientsRouter)
 app.use('/todos', todosRouter)
-app.use('/schedules', schedulesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

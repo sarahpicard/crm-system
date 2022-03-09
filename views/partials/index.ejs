@@ -25,6 +25,11 @@
       <i class='bx bx-menu' id="header-toggle"></i>
     </div>
 
+    <form action="/clients/search">
+      <input type="text" placeholder="search for a client..." name="term">
+      <button type="submit">Search</button>
+    </form>
+
 
 <!----------------------- 🧒  avatar 🧒 ------------------------>
     <% if (user?.profile.avatar) { %>
@@ -48,11 +53,6 @@
           </button>
         </a>
         <% } %>
-
-          <!-- <div class="header__img"> -->
-          <!-- //img below is avatar -->
-          <!-- <img src="/perfil.jpeg" alt="">
-            </div> -->
   </header>
 
 <!------------------- 🗺 navigation components 🗺 ------------------>
@@ -79,19 +79,8 @@
             <i class="fa-solid fa-clipboard-list"></i>
             <span class="nav__name">To-Do's</span>
           </a>
-
-          <a href="/schedules" class="nav__link">
-            <i class="fa-solid fa-calendar-days"></i>
-            <span class="nav__name">Schedule</span>
-          </a>
-
         </div>
       </div>
-
-      <!-- <a href="#" class="nav__link">
-                <i class='bx bx-log-out nav__icon' ></i>
-                <span class="nav__name">Log Out</span>
-              </a> -->
     </nav>
   </div>
 </body>

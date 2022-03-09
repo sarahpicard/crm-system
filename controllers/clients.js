@@ -102,6 +102,13 @@ function showRecentConversations(req, res) {
   })
 }
 
+function showDaily(req, res) {
+  Client.conversations.find({}).sort({date: 'asc'}).limit(10).then(conversation => {
+    res.render('/', {
+      customer: conversation,
+    })
+  })
+}
 
 
 export {
@@ -114,4 +121,5 @@ export {
   createConversation,
   deleteClient as delete,
   showRecentConversations,
+  showDaily,
 }
