@@ -150,11 +150,21 @@ body {
 }
 .edit-h1 {
   font-size: 3rem;
+  margin-top: -2.5%
 }
 .tel-format {
   font-size: 0.75rem;
 }
 .edit-btn {
+  margin-top: 1%;
+}
+
+/*------------------------ 🆕 new client view 🆕 ---------------*/
+.new-h1 {
+  font-size: 3rem;
+  margin-top: -2.5%;
+}
+.new-btn {
   margin-top: 1%;
 }
 

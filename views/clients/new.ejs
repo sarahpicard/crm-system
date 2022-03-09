@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1><%= title %></h1>
+  <h1 class="new-h1"><%= title %></h1>
 
   <form class="form-group" action="/clients" method="post">
 
@@ -13,7 +13,7 @@
 
     <div class="form-floating mb-3">
       <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" required class="form-control" id="floatingInput" placeholder="phone">
-      <small><%= "format: 123-456-7890" %></small>
+      <small class="tel-format"><%= "format: 123-456-7890" %></small>
       <label for="floatingInput">phone</label>
     </div>
 
@@ -55,7 +55,7 @@
       <label for="floatingTextarea2">notes</label>
     </div>
 
-    <button class="btn btn-success" type="submit">Submit</button>
+    <button class="btn btn-success new-btn" type="submit">Submit</button>
   </form>
 </section>
 
