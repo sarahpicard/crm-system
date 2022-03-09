@@ -27,10 +27,11 @@ function newClient(req, res) {
 
 function show(req, res) {
   Client.findById(req.params.id)
-    .populate('owner')
-    .then(customer => {
-      Client.findById(req.user.profile._id)
-        .then(self => {
+  .populate('owner')
+  .then(customer => {
+    Client.findById(req.user.profile._id)
+    .then(self => {
+          console.log(customer.linkedinurl)
           const isSelf = req.user.profile
           res.render('clients/show', {
             customer, 

@@ -111,10 +111,30 @@ body {
 #row {
   width: 90%;
   padding-left: 20px;
+  margin-top: 0;
 }
 .further-info {
   margin-top: 20px;
 }
+.linkedin-button {
+  background-color: #0e76a8;
+  color: white;
+  border: 1px solid #084461;
+  height: 40px;
+  width: 110px;
+  font-size: 15px;
+  text-align: center;
+}
+.linkedin-button:link, .linkedin-button:visited {
+  color: white; 
+}
+.linkedin-button:active, .linkedin-button:hover {
+  background-color: #084461;
+  color: white;
+}
+
+
+
 
 /* edit client view  */
 #floatingTextarea2 {

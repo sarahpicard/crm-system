@@ -36,8 +36,11 @@
           </div>
         </div>
         <div class="further-info">
-          <p><%= customer.notes %></p>
-          <p><%= customer.linkedinurl %></p>
+          <p>Notes: <%= customer.notes %></p>
+          <a href="<%= customer.linkedinurl %>" class="btn linkedin-button btn-lg">
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+          </a>
           <p><%= customer.source %></p>
           <p><%= customer.contacted %></p>
         </div>
