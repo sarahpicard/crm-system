@@ -43,6 +43,10 @@ body {
 .intro-text {
   font-size: 18px;
   margin-right: 70px;
+  margin-bottom: 2%;
+}
+.card-text {
+  color: #949494;
 }
 
 /* ------------- 📇 clients index page 📇 ----------- */
