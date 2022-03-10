@@ -183,6 +183,7 @@ body {
 .todos-ul {
   columns: 3;
   vertical-align: top;
+  margin-right: 6.8%;
 }
 .todo-h3 {
   font-size: small;
@@ -219,5 +220,117 @@ body {
   float: inline-end;
 }
 
-/*-------------- light dark mode ----------------*/
+/* media queries  */
+/* @media screen and (max-width: 360px) {
+  body {
+    width: 90%;
+  }
+  .profile-div {
+    display: inline-block;
+  }
+  .further-info {
+    width: 18.5rem;
+  }
 
+} */
+
+@media screen and (max-width: 920px) {
+  .client-avatar {
+    height: 100px;
+    width: 100px;
+    margin-top: 2rem;
+    float: right;
+  }
+  .edit-div {
+    display: block;
+    position: fixed;
+  }
+  .edit-button {
+    height: 35px;
+    width: 35px;
+    font-size: 12px; 
+  }
+  .customer-name {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    margin-top: 2rem;
+  }
+  .customer-occupation {
+    font-size: medium;
+    margin-top: 0;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  .info-div {
+    display: block;
+    background-color: white;
+  }
+  .profile-img {
+    background-color: white;
+  }
+  .info {
+    display: grid;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 841px) {
+  .edit-div {
+    display: inline-block;
+  }
+  .client-avatar {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .client-avatar {
+    margin-top: -2rem;
+  }
+  .intro-text {
+    font-size: 16px;
+  }
+  .prelogin-home {
+    font-size: 60px;
+  }
+  .card-group {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 462px) {
+  .customer-occupation {
+    font-size: xx-small;
+  }
+  .customer-name {
+    font-size: 1rem;
+  }
+  .info {
+    font-size: small;
+  }
+  .client-avatar {
+    display: none;
+  }
+  .card-group {
+    font-size: 12px;
+  }
+  .prelogin-home {
+    font-size: 40px;
+  }
+  .intro-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  .customer-name {
+    font-size: 0.7rem;
+  }
+  .customer-occupation {
+    font-size: 0.3rem;
+  }
+  .prelogin-home {
+    font-size: 25px;
+  }
+}
