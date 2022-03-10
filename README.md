@@ -1,6 +1,6 @@
-# Index CRM System
+# IndexCRM System
 ## Getting Started
-Welcome to Index CRM! This project was developed to help busy professionals track their client contact information, conversations had with clients, and daily to-do list items. 
+Welcome to IndexCRM! This project was developed to help busy professionals track their client contact information, conversations had with clients, and daily to-do list items. 
 
 ### Take a look at Index CRM [HERE](https://index-crm-system.herokuapp.com)
 

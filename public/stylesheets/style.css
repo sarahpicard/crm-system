@@ -44,6 +44,12 @@ body {
   font-size: 18px;
   margin-right: 70px;
   margin-bottom: 2%;
+  color: #949494;
+}
+.intro-text-2 {
+  margin-right: 70px;
+  font-size: 18px;
+  color: #34573f;
 }
 .card-text {
   color: #949494;
