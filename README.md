@@ -79,6 +79,8 @@ This page utilizes an embedded form for entering new to-do list items and will a
 
 Clicking the checkbox to the left of an active to-do item will "cross the item off." This action will not remove the to-do from view, but will only "cross it off." In order to remove a to-do list item permanently, click on the green "X" button to the right of the specified to-do. 
 
+>For example purposes, all of the above "clients" are fictional. 
+
 ---
 
 ## Icebox Features 🧊
