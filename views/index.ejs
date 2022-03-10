@@ -2,27 +2,6 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <% if (user) { %>
-    <h1 class="daily-h1">Daily View</h1>
-    <div class="daily-top-row">
-      <div class="card conversation-child" style="width: 18rem;">
-        <div class="card-header">Recent Conversations</div>
-      </div>
-      <div class="card todo-child" style="width: 18rem;">
-        <div class="card-header">Recent To-Dos</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-          <li class="list-group-item"></li>
-        </ul>
-      </div>
-    </div>
-
-
-
-  <% } else { %>
     <h1 class="prelogin-home">Welcome, to IndexCRM!</h1>
     <p class="intro-text-2">IndexCRM was developed to help busy professionals like you keep track of your client contact information, recent conversations you've had with your clients, and any to-do list items that you're currently working through. 
     </p>
@@ -50,7 +29,6 @@
         </div>
       </div>
     </div>
-  <% } %>
 </main>
 
 <%- include('./partials/footer') %>
