@@ -13,6 +13,8 @@ The project includes space for tracking contact information, the ability to edit
 
 This CRUD application was developed using RESTful architecture principles and MEN stack technologies (MongoDB, ExpressJS & Node.js)
 
+Planning materials for this project were organized on a public Trello board (view [here](https://trello.com/b/F0MMmDzB/unit-2-project-crm-system))
+
 
 ## Technologies Used 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
