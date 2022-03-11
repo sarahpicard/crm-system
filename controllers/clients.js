@@ -92,25 +92,6 @@ function deleteClient(req, res) {
   })
 }
 
-// function showRecentConversations(req, res) {
-//   Client.find({ owner: req.user.profile._id}).then(conversation => {
-//     Client.findById(req.user.profile._id)
-//     res.render('clients/index', {
-//       title: 'Clients',
-//       customer: conversation,
-//       // isSelf: req.user.profile, 
-//     })
-//   })
-// }
-
-// function showDaily(req, res) {
-//   Client.conversations.find({}).sort({date: 'asc'}).limit(10).then(conversation => {
-//     res.render('/', {
-//       customer: conversation,
-//     })
-//   })
-// }
-
 
 export {
   index,
@@ -121,6 +102,4 @@ export {
   update,
   createConversation,
   deleteClient as delete,
-  // showRecentConversations,
-  // showDaily,
 }

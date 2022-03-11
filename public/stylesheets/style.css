@@ -230,19 +230,6 @@ body {
   float: inline-end;
 }
 
-/* media queries  */
-/* @media screen and (max-width: 360px) {
-  body {
-    width: 90%;
-  }
-  .profile-div {
-    display: inline-block;
-  }
-  .further-info {
-    width: 18.5rem;
-  }
-
-} */
 
 @media screen and (max-width: 920px) {
   .client-avatar {
